@@ -1,5 +1,6 @@
 import { Facebook, ShoppingBag, MessageCircle, MessageSquare, Instagram } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const links = [
@@ -36,7 +37,9 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#fff7ed] via-[#ffedd5] to-[#fcd34d]/20 flex flex-col items-center py-12 px-4 sm:px-6 font-sans relative overflow-hidden">
+    <>
+      <Analytics />
+      <div className="min-h-screen bg-gradient-to-br from-[#fff7ed] via-[#ffedd5] to-[#fcd34d]/20 flex flex-col items-center py-12 px-4 sm:px-6 font-sans relative overflow-hidden">
       {/* Decorative colorful blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
         <div className="absolute top-[-5%] left-[-10%] w-[50%] h-[50%] rounded-full bg-[#fde68a]/40 blur-3xl mix-blend-multiply"></div>
@@ -143,5 +146,6 @@ export default function App() {
         </motion.div>
       </motion.div>
     </div>
+    </>
   );
 }
