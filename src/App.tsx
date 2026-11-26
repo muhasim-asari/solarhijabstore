@@ -1,4 +1,4 @@
-import { Facebook, ShoppingBag, MessageCircle, Instagram } from 'lucide-react';
+import { Facebook, ShoppingBag, MessageCircle, Instagram, Store } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function App() {
@@ -16,6 +16,13 @@ export default function App() {
       icon: <ShoppingBag className="w-5 h-5" />,
       style: 'bg-[#fff3e0] text-[#e65100] border border-[#ffe0b2] hover:shadow-[0_8px_20px_-6px_rgba(230,81,0,0.25)] hover:border-[#ffcc80]',
       iconStyle: 'bg-white text-[#e65100]',
+    },
+    {
+      title: 'Toco Store',
+      url: import.meta.env.VITE_TOCO_URL || 'https://toco.id/store/toko-solar-hijab',
+      icon: <Store className="w-5 h-5" />,
+      style: 'bg-[#fef9e7] text-[#b7791f] border border-[#fdebd0] hover:shadow-[0_8px_20px_-6px_rgba(183,121,31,0.25)] hover:border-[#f9e79f]',
+      iconStyle: 'bg-white text-[#b7791f]',
     },
     {
       title: 'Facebook',
@@ -48,52 +55,19 @@ export default function App() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="max-w-md w-full z-10 flex flex-col items-center pt-8 pb-12"
       >
-        {/* Logo / Profile */}
+        {/* Brand Logo Header */}
         <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
+          initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5, type: 'spring' }}
-          className="w-32 h-32 mb-6 rounded-full overflow-hidden border-[6px] border-white shadow-[0_8px_24px_-8px_rgba(207,161,68,0.3)] flex items-center justify-center bg-white relative"
+          className="flex flex-col items-center mb-2"
         >
-          <svg
-            viewBox="0 0 100 100"
-            className="w-24 h-24 text-[#cfa144]"
-            fill="currentColor"
-          >
-            <path d="M50 35c-12 0-22 8-25 19h50c-3-11-13-19-25-19z" />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-              d="M15 65 c 20 -10, 50 -10, 70 0"
-            />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-              d="M25 70 c 15 -8, 35 -8, 50 0"
-            />
-            <line x1="50" y1="10" x2="50" y2="20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-            <line x1="30" y1="15" x2="35" y2="24" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-            <line x1="70" y1="15" x2="65" y2="24" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-            <line x1="15" y1="30" x2="24" y2="35" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-            <line x1="85" y1="30" x2="76" y2="35" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-            <line x1="10" y1="48" x2="20" y2="48" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-            <line x1="90" y1="48" x2="80" y2="48" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-          </svg>
+          <img
+            src="/Logo Solar Hijab.svg"
+            alt="Solar Hijab"
+            className="w-56 sm:w-64 h-auto object-contain hover:scale-105 transition-transform duration-300"
+          />
         </motion.div>
-
-        {/* Title */}
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-3xl font-extrabold text-[#5d4037] mb-2 tracking-tight flex items-center gap-1"
-        >
-          Solar hijab<span className="text-[#cfa144]">.</span>
-        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
