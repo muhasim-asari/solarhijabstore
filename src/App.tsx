@@ -63,7 +63,7 @@ export default function App() {
           className="flex flex-col items-center mb-2"
         >
           <img
-            src="/Logo Solar Hijab.svg"
+            src="/assets/aistudio/Logo_Solar_Hijab_-_TP_f7fc6fb8.png"
             alt="Solar Hijab"
             className="w-56 sm:w-64 h-auto object-contain hover:scale-105 transition-transform duration-300"
           />
